@@ -4,15 +4,16 @@
 }
 
 .header-content-container {
-  width: 50vw;
+  width: 55vw;
   margin: 0 auto;
-  height: 12vw;
+  height: 9vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   color: white;
 
   .header-menu-text-items {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-left: 0px;
@@ -45,6 +46,11 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    li {
+      height: 100%;
+      margin-top: 30px;
+    }
   }
 
   .header-demosite-text {
@@ -58,6 +64,7 @@
     grid-row-end: 3;
 
     h1 {
+      cursor: pointer;
       font-size: 32px;
       font-weight: 800;
     }

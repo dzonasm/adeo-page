@@ -1,7 +1,7 @@
 import dropdownMenuActionTypes from './dropdown-types'
 
 const initialState = {
-    showDropdownMenu: false
+    showDropdownMenu: true
 }
 
 function dropdownMenuReducer(state = initialState, action) {

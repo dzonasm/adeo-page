@@ -1,23 +1,10 @@
 import React from 'react'
 import DropDownMenu from '../withDropdownMenu/dropdown-menu.component'
-import { useSelector, useDispatch } from 'react-redux'
-
 
 import "./header.styles.scss"
-import { hideDropdownMenu, showDropdownMenu } from '../../redux/dropdown-reducer/dropdown-actions'
 
 const Header = () => {
-    const selectDropdownMenuState = state => state.dropdownMenu.showDropdownMenu
-    const dropdownMenuVisible = useSelector(selectDropdownMenuState)
-    console.log(dropdownMenuVisible)
-    const dispatch = useDispatch()
 
-    const hide = () => {
-        dispatch(hideDropdownMenu)
-    }
-    const show = () => {
-        dispatch(showDropdownMenu)
-    }
 
     return (
         <div className='header'>
@@ -34,22 +21,13 @@ const Header = () => {
                         DEMO<span>SITE</span>
                     </h1>
                 </div>
-                <div className='header-nav'>
-                    <div className='nav-item'>HOME</div>
-                    <div className='nav-item'>SERVICE</div>
-                    <div
-                        onMouseEnter={show}
-                        onMouseLeave={hide}
-                        className='nav-item'>WORKS</div>
-                    {
-                        dropdownMenuVisible ?
-                            <DropDownMenu />
-                            :
-                            null
-                    }
-                    <div className='nav-item'>ABOUT ME</div>
-                    <div className='nav-item'>CONTACT</div>
-                </div>
+                <ul className='header-nav'>
+                    <li className='nav-item'>HOME</li>
+                    <li className='nav-item'>SERVICE</li>
+                    <DropDownMenu />
+                    <li className='nav-item'>ABOUT ME</li>
+                    <li className='nav-item'>CONTACT</li>
+                </ul>
             </div>
         </div>
     )

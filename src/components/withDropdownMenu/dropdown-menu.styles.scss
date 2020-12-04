@@ -1,49 +1,60 @@
-.dropdown-menu {
-  background-color: #1e2123;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 140px;
-  position: absolute;
-  transform: translate(-15%, 65%);
-  z-index: 1;
+.dropdown-item {
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  vertical-align: auto;
+  &:hover {
+    transform: scale();
+  }
 
-  .dropdown-menu-items {
-    list-style-type: none;
-    position: relative;
+  .dropdown-menu {
+    display: none;
+    margin-top: 10px;
+    background-color: #1e2123;
+    color: white;
+    flex-direction: column;
+    width: 140px;
+    position: absolute;
+    transform: translate(-40px, 0%);
     z-index: 1;
-  }
-  .dropdown-menu-item {
-    padding: 5px 20px;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
-    &:first-of-type {
-      margin-top: 5px;
-    }
-    &:last-child {
-      margin-bottom: 5px;
-    }
-    &:hover {
-      background-color: white;
-      color: #1e2123;
-    }
-  }
-}
 
-.dropdown-menu-pointer {
-  width: 20px;
-  height: 20px;
-  background-color: #1e1e1e;
-  position: absolute;
-  transform: translate(60px, -50%) rotate(45deg);
-  margin: 0 auto;
-  z-index: -1;
-}
+    .dropdown-menu-items {
+      list-style-type: none;
+      position: relative;
+      z-index: 1;
+    }
+    .dropdown-menu-item {
+      padding: 5px 15px;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+      &:first-of-type {
+        margin-top: 5px;
+      }
+      &:last-child {
+        margin-bottom: 5px;
+      }
+      &:hover {
+        background-color: white;
+        color: #1e2123;
+      }
+    }
+  }
 
-.dropdown-menu-shape {
-  width: 60px;
-  height: 40px;
-  background-color: transparent;
-  position: absolute;
-  transform: translate(40px, -100%);
+  .arrow {
+    width: 15px;
+    height: 15px;
+    background-color: #1e1e1e;
+    position: absolute;
+    transform: translate(60px, -50%) rotate(45deg);
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  .dropdown-menu-shape {
+    width: 60px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    transform: translate(40px, -100%);
+  }
 }
