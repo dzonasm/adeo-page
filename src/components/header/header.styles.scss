@@ -57,11 +57,12 @@
     grid-row-start: 2;
     grid-row-end: 3;
 
-    .demo-text {
-      font-weight: bold;
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
     }
-    .site-text {
-      font-weight: lighter;
+    span {
+      font-weight: 300;
     }
   }
 }

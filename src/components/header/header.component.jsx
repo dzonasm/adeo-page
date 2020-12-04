@@ -1,8 +1,24 @@
 import React from 'react'
+import DropDownMenu from '../withDropdownMenu/dropdown-menu.component'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 import "./header.styles.scss"
+import { hideDropdownMenu, showDropdownMenu } from '../../redux/dropdown-reducer/dropdown-actions'
 
 const Header = () => {
+    const selectDropdownMenuState = state => state.dropdownMenu.showDropdownMenu
+    const dropdownMenuVisible = useSelector(selectDropdownMenuState)
+    console.log(dropdownMenuVisible)
+    const dispatch = useDispatch()
+
+    const hide = () => {
+        dispatch(hideDropdownMenu)
+    }
+    const show = () => {
+        dispatch(showDropdownMenu)
+    }
+
     return (
         <div className='header'>
             <div className='header-content-container'>
@@ -14,15 +30,23 @@ const Header = () => {
                     <div className='header-item'>AND LAST ONE</div>
                 </div>
                 <div className='header-demosite-text'>
-                    <div className='demo-text'>
-                        DEMO
-            </div>
-                    <div className='site-text'>SITE</div>
+                    <h1>
+                        DEMO<span>SITE</span>
+                    </h1>
                 </div>
                 <div className='header-nav'>
                     <div className='nav-item'>HOME</div>
                     <div className='nav-item'>SERVICE</div>
-                    <div className='nav-item'>WORKS</div>
+                    <div
+                        onMouseEnter={show}
+                        onMouseLeave={hide}
+                        className='nav-item'>WORKS</div>
+                    {
+                        dropdownMenuVisible ?
+                            <DropDownMenu />
+                            :
+                            null
+                    }
                     <div className='nav-item'>ABOUT ME</div>
                     <div className='nav-item'>CONTACT</div>
                 </div>
