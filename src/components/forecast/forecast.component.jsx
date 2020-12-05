@@ -2,13 +2,33 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import forecastActionTypes from '../../redux/forecast/forecast-action-types'
 import Spinner from '../spinner/spinner.component'
+import { imageLogic } from './forecast.utils'
+
+import { ReactComponent as Sunglasses } from '../../Assets/sunglasses.svg'
+import { ReactComponent as SnowFlake } from '../../Assets/snowflake.svg'
+import { ReactComponent as Umbrella } from '../../Assets/umbrella.svg'
+
+import './forecast.styles.scss'
 
 const Forecast = () => {
     const dispatch = useDispatch()
-
     const selectForecasts = state => state.forecast.forecast
     const forecast = useSelector(selectForecasts)
 
+
+    let forecastImage
+    if (forecast) {
+        const image = imageLogic(forecast)
+        if (image === 'sunglasses') {
+            forecastImage = <Sunglasses className='forecast-image' />
+        }
+        if (image === 'snow') {
+            forecastImage = <SnowFlake className='forecast-image' />
+        }
+        if (image === 'umbrella') {
+            forecastImage = <Umbrella className='forecast-image' />
+        }
+    }
 
 
     useEffect(() => {
@@ -18,27 +38,17 @@ const Forecast = () => {
 
     return (
         <div className='forecast-container'>
-            {
-                forecast ? <p>got it</p> : <Spinner />
-            }
+            <div className='forecast-image-container'>
+                {
+                    forecast ?
+                        forecastImage
+                        :
+                        <Spinner />
+                }
+            </div>
         </div>
     )
 }
 
 export default Forecast
 
-// conditionCode - oro sąlygos, kodas.
-// Galimos reikšmės:
-// clear - giedra;
-// isolated-clouds - mažai debesuota;
-// scattered-clouds - debesuota su pragiedruliais;
-// overcast - debesuota;
-// light-rain - nedidelis lietus;
-// moderate-rain - lietus;
-// heavy-rain - smarkus lietus;
-// sleet - šlapdriba;
-// light-snow - nedidelis sniegas;
-// moderate-snow - sniegas;
-// heavy-snow - smarkus sniegas;
-// fog - rūkas;
-// na - oro sąlygos nenustatytos.
