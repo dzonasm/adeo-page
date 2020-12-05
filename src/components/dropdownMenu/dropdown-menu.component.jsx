@@ -29,11 +29,13 @@ const DropDownMenu = () => {
                 className='dropdown-menu'
             >
                 <div className='arrow'></div>
-                <li className='dropdown-menu-item'>ALL</li>
-                <li className='dropdown-menu-item'>GRAPHIC</li>
-                <li className='dropdown-menu-item'>DESIGN</li>
-                <li className='dropdown-menu-item'>LOGO</li>
-                <li className='dropdown-menu-item'>WEBSITE</li>
+                <ul>
+                    <li className='dropdown-menu-item'>ALL</li>
+                    <li className='dropdown-menu-item'>GRAPHIC</li>
+                    <li className='dropdown-menu-item'>DESIGN</li>
+                    <li className='dropdown-menu-item'>LOGO</li>
+                    <li className='dropdown-menu-item'>WEBSITE</li>
+                </ul>
 
             </div>
         </li>

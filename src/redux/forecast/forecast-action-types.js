@@ -1,0 +1,7 @@
+const forecastActionTypes = {
+    FORECAST_FETCH_START: 'FORECAST_FETCH_START',
+    FORECAST_FETCH_SUCCESS: 'FORECAST_FETCH_SUCCESS',
+    FORECAST_FETCH_FAILURE: 'FORECAST_FETCH_FAILURE',
+}
+
+export default forecastActionTypes

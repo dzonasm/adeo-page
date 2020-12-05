@@ -1,5 +1,5 @@
 import React from 'react'
-import DropDownMenu from '../withDropdownMenu/dropdown-menu.component'
+import DropDownMenu from '../dropdownMenu/dropdown-menu.component'
 
 import "./header.styles.scss"
 

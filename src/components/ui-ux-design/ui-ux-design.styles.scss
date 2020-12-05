@@ -1,0 +1,23 @@
+.ui-ux-design-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+
+  .background-image {
+    background-image: url("../../Assets/alexandra-gorn-VBo24-Ys6gQ-unsplash 1 1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+
+  .ui-ux-text {
+    background-color: #d7d7d7;
+    height: calc(26rem - 200px);
+    padding: 2rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+}
