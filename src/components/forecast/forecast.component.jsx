@@ -7,6 +7,7 @@ import { imageLogic } from './forecast.utils'
 import { ReactComponent as Sunglasses } from '../../Assets/sunglasses.svg'
 import { ReactComponent as SnowFlake } from '../../Assets/snowflake.svg'
 import { ReactComponent as Umbrella } from '../../Assets/umbrella.svg'
+import { ReactComponent as demosite } from '../../Assets/DEMOSITE.svg'
 
 import './forecast.styles.scss'
 
