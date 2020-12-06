@@ -1,0 +1,42 @@
+.text-and-form-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 35vw 15vw;
+  grid-gap: 5vw;
+
+  .form-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      margin-bottom: 1rem;
+      padding: 5px 10px;
+      width: 100%;
+      border: 2px solid #d7d7d7;
+      padding: 5px;
+    }
+    textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      outline: none;
+      resize: none;
+      border: 2px solid #d7d7d7;
+      padding: 5px;
+    }
+  }
+
+  .contact-text {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
