@@ -1,10 +1,10 @@
 import React from 'react'
 import Navigation from '../../components/navigation/navigation.component'
+import { Link } from 'react-router-dom'
 
 import "./header.styles.scss"
 
 const Header = () => {
-
 
     return (
         <div className='header'>
@@ -17,9 +17,11 @@ const Header = () => {
                     <div className='header-item'>AND LAST ONE</div>
                 </div>
                 <div className='header-demosite-text'>
-                    <h1>
-                        DEMO<span>SITE</span>
-                    </h1>
+                    <Link to='/'>
+                        <h1>
+                            DEMO<span>SITE</span>
+                        </h1>
+                    </Link>
                 </div>
                 <Navigation />
             </div>
