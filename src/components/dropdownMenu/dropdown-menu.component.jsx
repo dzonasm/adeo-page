@@ -4,7 +4,7 @@ import { hideDropdownMenu, showDropdownMenu } from '../../redux/dropdown-reducer
 
 import './dropdown-menu.styles.scss'
 
-const DropDownMenu = () => {
+const DropDownMenu = ({ isFooterNav }) => {
     const selectDropdownMenuState = state => state.dropdownMenu.showDropdownMenu
     const dropdownMenuVisible = useSelector(selectDropdownMenuState)
     console.log(dropdownMenuVisible)
@@ -26,7 +26,7 @@ const DropDownMenu = () => {
         >WORKS
             <div
                 style={{ display: `${dropdownMenuVisible ? 'flex' : 'none'}` }}
-                className='dropdown-menu'
+                className={`${isFooterNav ? 'items-up' : null} dropdown-menu`}
             >
                 <div className='arrow'></div>
                 <ul>

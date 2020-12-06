@@ -1,6 +1,7 @@
 .header {
   width: 100vw;
   background-color: #448ccb;
+  margin-bottom: 4rem;
 }
 
 .header-content-container {
@@ -34,22 +35,6 @@
         border: none;
       }
       border-right: 1.5px solid white;
-    }
-  }
-
-  .header-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    li {
-      height: 100%;
-      margin-top: 30px;
     }
   }
 

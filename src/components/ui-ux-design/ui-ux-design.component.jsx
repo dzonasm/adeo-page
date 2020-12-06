@@ -8,8 +8,8 @@ const UiUxDesign = () => (
         <div className='background-image'></div>
         <div className='ui-ux-text'>
             <h2>UI/UX DESIGN</h2>
-            <LoremIpsum avgSentencesPerParagraph={4} p={1} />
-            <LoremIpsum avgSentencesPerParagraph={4} p={1} />
+            <LoremIpsum avgSentencesPerParagraph={3} avgWordsPerSentence={6} p={1} />
+            <LoremIpsum avgSentencesPerParagraph={3} avgWordsPerSentence={6} p={1} />
         </div>
     </div>
 )

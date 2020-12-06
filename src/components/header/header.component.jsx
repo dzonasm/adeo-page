@@ -1,5 +1,5 @@
 import React from 'react'
-import DropDownMenu from '../dropdownMenu/dropdown-menu.component'
+import Navigation from '../../components/navigation/navigation.component'
 
 import "./header.styles.scss"
 
@@ -21,13 +21,7 @@ const Header = () => {
                         DEMO<span>SITE</span>
                     </h1>
                 </div>
-                <ul className='header-nav'>
-                    <li className='nav-item'>HOME</li>
-                    <li className='nav-item'>SERVICE</li>
-                    <DropDownMenu />
-                    <li className='nav-item'>ABOUT ME</li>
-                    <li className='nav-item'>CONTACT</li>
-                </ul>
+                <Navigation />
             </div>
         </div>
     )

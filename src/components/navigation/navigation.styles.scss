@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  &.isFooterNav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: auto;
+  }
+
+  li {
+    padding-top: 20px;
+    height: 100%;
+    margin-top: 30px;
+  }
+}

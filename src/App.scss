@@ -6,7 +6,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
 }
 
 a {
@@ -23,5 +22,6 @@ li {
 
 html,
 body {
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
