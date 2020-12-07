@@ -1,10 +1,16 @@
 import React from 'react'
 import { LoremIpsum } from 'react-lorem-ipsum'
 import CustomButton from '../custom-button/custom-button.component'
+import { withRouter } from 'react-router'
 
 import './contact.styles.scss'
 
-const Contact = () => {
+const Contact = ({ history }) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        history.push('/page/learn more')
+    }
 
 
     return (
@@ -16,14 +22,14 @@ const Contact = () => {
                     <LoremIpsum avgSentencesPerParagraph={4} p={3} />
                 </div>
                 <div className='form-container'>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label>NAME</label>
                         <input type='text'></input>
                         <label>EMAIL</label>
                         <input type='text'></input>
                         <label>MESSAGE</label>
                         <textarea rows='8'></textarea>
-                        <CustomButton text='learn more' isInverted />
+                        <CustomButton isFormButton text='learn more' isInverted />
                     </form>
                 </div>
             </div>
@@ -31,4 +37,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default withRouter(Contact)

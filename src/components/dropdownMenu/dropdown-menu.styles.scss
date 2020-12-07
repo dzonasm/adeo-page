@@ -1,10 +1,12 @@
 .dropdown-item {
   cursor: pointer;
-  position: relative;
-  height: 100%;
+  position: absolute;
+  transform: translateX(240%);
   vertical-align: auto;
-  margin-bottom: -10px;
-  padding: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+
   &:hover {
     transform: scale();
   }
@@ -13,11 +15,12 @@
     display: none;
     margin-top: 10px;
     background-color: #1e2123;
+    padding-bottom: 5px;
     color: white;
     flex-direction: column;
     width: 140px;
     position: absolute;
-    transform: translate(-40px, 0%);
+    transform: translate(-40px, 40px);
     z-index: 1;
     &.items-up {
       transform: translate(-40px, -200px);

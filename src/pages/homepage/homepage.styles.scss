@@ -5,12 +5,13 @@
 .homepage-content {
   width: 55vw;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
-.homepage-first-two-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.welcome-and-design-container {
+  display: grid;
+  grid-template-columns: 30% 65%;
+  grid-gap: 5%;
   margin-bottom: 4rem;
 }
 
@@ -28,11 +29,12 @@
 
 .products-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 47.5% 47.5%;
   grid-template-rows: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 5%;
   width: 100%;
   margin-bottom: 4rem;
+
   .offers-today {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -41,5 +43,38 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .homepage-content {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .homepage-content {
+    max-width: 500px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+
+    .welcome-and-design-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .welcome-and-design-container > div {
+      margin-bottom: 1rem;
+    }
+  }
+  .products-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .products-container > div {
+    margin-bottom: 1rem;
+  }
+
+  .offers-today {
   }
 }

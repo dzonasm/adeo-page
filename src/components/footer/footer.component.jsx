@@ -11,8 +11,14 @@ const Footer = () => {
                 <div className='footer-text'>
                     <LoremIpsum avgSentencesPerParagraph={2} p={1} />
                 </div>
-                <Navigation isFooterNav />
-                <div className='copyright'>&copy; <span>DEMO</span>SITE All rights reserved</div>
+                <div className='footer-nav-container'>
+                    <Navigation isFooterNav />
+                </div>
+                <div className='copyright'>
+                    <p>
+                        &copy; <span>DEMO</span>SITE All rights reserved
+                </p>
+                </div>
             </div>
         </div>
     )

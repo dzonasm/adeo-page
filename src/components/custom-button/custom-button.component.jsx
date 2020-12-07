@@ -2,12 +2,13 @@ import React from 'react'
 
 import './custom-button.scss'
 
-const CustomButton = ({ isInverted, isBackButton, text, onClick }) => {
+const CustomButton = ({ isFormButton, isInverted, isBackButton, text, onClick }) => {
 
     return (
         <button
             className={`
             ${isInverted ? 'inverted' : null} 
+            ${isFormButton ? 'formButton' : null}
             custom-button`}
             onClick={onClick}
         >

@@ -6,7 +6,6 @@ import forecastActionTypes from './forecast-action-types'
 export function* fetchForecastAsync() {
     try {
         //calling the api
-        console.log('attempt to call')
         const url = 'https://cors-anywhere.herokuapp.com/https://api.meteo.lt/v1/places/kaunas/forecasts/long-term'
         const response = yield call(axios.get, url)
         const timestampData = yield response.data.forecastTimestamps
@@ -25,7 +24,6 @@ export function* fetchForecastAsync() {
 }
 
 export function* watchfetchForecastAsync() {
-    yield console.log('im running')
     yield takeEvery(forecastActionTypes.FORECAST_FETCH_START, fetchForecastAsync)
 }
 

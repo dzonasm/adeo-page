@@ -15,9 +15,11 @@ const HomePage = () => {
     return (
         <div className='homepage-container'>
             <div className='homepage-content'>
-                <div className='homepage-first-two-items'>
+                <div className='welcome-and-design-container'>
                     <Welcome />
-                    <UiUxDesign />
+                    <div className='ui-ux-container'>
+                        <UiUxDesign />
+                    </div>
                 </div>
                 <div className='products-headline'>
                     <h1>PRODUCTS</h1>
