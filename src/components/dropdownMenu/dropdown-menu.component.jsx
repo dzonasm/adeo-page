@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { hideDropdownMenu, showDropdownMenu } from '../../redux/dropdown-reducer/dropdown-actions'
+import { Link } from 'react-router-dom'
 
 import './dropdown-menu.styles.scss'
 
@@ -30,11 +31,21 @@ const DropDownMenu = ({ isFooterNav }) => {
             >
                 <div className='arrow'></div>
                 <ul>
-                    <li className='dropdown-menu-item'>ALL</li>
-                    <li className='dropdown-menu-item'>GRAPHIC</li>
-                    <li className='dropdown-menu-item'>DESIGN</li>
-                    <li className='dropdown-menu-item'>LOGO</li>
-                    <li className='dropdown-menu-item'>WEBSITE</li>
+                    <Link to='page/all'>
+                        <li className='dropdown-menu-item'>ALL</li>
+                    </Link>
+                    <Link to='page/graphic'>
+                        <li className='dropdown-menu-item'>GRAPHIC</li>
+                    </Link>
+                    <Link to='page/design'>
+                        <li className='dropdown-menu-item'>DESIGN</li>
+                    </Link>
+                    <Link to='page/logo'>
+                        <li className='dropdown-menu-item'>LOGO</li>
+                    </Link>
+                    <Link to='page/item'>
+                        <li className='dropdown-menu-item'>WEBSITE</li>
+                    </Link>
                 </ul>
 
             </div>
