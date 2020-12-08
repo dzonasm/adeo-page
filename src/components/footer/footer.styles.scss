@@ -45,6 +45,7 @@
 @media screen and (max-width: 1024px) {
   .footer-container {
     height: 8vh;
+    min-height: 60px;
   }
 
   .footer-nav-container {
@@ -64,16 +65,16 @@
     align-items: center;
     justify-content: center;
     margin-top: 0px !important;
-    padding-bottom: 20px !important;
     font-size: 16px !important;
+
+    p {
+      margin: 0 auto;
+    }
   }
 }
 
 @media screen and (max-width: 1536px) {
   .footer-content {
     width: 75vw !important;
-    .copyright p {
-      margin-top: 30px;
-    }
   }
 }

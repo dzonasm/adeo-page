@@ -17,12 +17,15 @@
 //this function will decide wich image to render when showing the weather forecast
 
 export const imageLogic = (forecast) => {
-    if (forecast.includes('rain') || forecast === 'sleet') {
+    if (forecast === "clear" || "isolated-clouds" || "scattered-clouds" || "na") {
+        return 'sunglasses'
+    }
+    if (forecast === 'sleet' || 'light-snow' || 'moderate-snow' || 'heavy-snow') {
+        return 'snow'
+    } if (forecast === 'overcast' || 'light-rain' || 'moderate-rain' || 'heavy-rain' || 'fog') {
         return 'umbrella'
     }
-    if (forecast.includes('snow')) {
-        return 'snow'
-    } else {
+    else {
         return 'sunglasses'
     }
 }
