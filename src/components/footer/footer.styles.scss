@@ -72,5 +72,8 @@
 @media screen and (max-width: 1536px) {
   .footer-content {
     width: 75vw !important;
+    .copyright p {
+      margin-top: 30px;
+    }
   }
 }

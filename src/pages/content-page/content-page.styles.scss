@@ -7,18 +7,23 @@
   }
 }
 
-.content-page-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.content-page-content {
+  width: 55vw;
+  margin: 0 auto;
   min-height: 130vh;
+}
 
+p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1536px) {
   .content-page-content {
-    width: 55vw;
-    margin: 0 auto;
+    width: 75vw;
   }
-
-  p {
-    margin-bottom: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .content-page-content {
+    width: 90vw;
   }
 }

@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom'
 
 import './dropdown-menu.styles.scss'
 
-const DropDownMenu = ({ history }) => {
+const DropDownMenu = ({ }) => {
     const selectDropdownMenuState = state => state.dropdownMenu.showDropdownMenu
     const dropdownMenuVisible = useSelector(selectDropdownMenuState)
     console.log(dropdownMenuVisible)
@@ -21,27 +21,28 @@ const DropDownMenu = ({ history }) => {
     }
 
     const links = ['all', 'graphic', 'design', 'logo', 'website']
-    const handleClick = () => history.push('works')
 
 
     return (
-        <div
-            onMouseEnter={show}
-            onMouseLeave={hide}
-            className='dropdown-item'
-        >
+        <div className='dropdown-container'>
             <div
-                style={{ display: `${dropdownMenuVisible ? 'flex' : 'none'}` }}
-                className='dropdown-menu'
+                onMouseEnter={show}
+                onMouseLeave={hide}
+                className='dropdown-item'
             >
-                {
-                    links.map(link => <DropdownLink key={uuidv4()} link={link} />)
-                }
-                <div className='arrow'></div>
-                <ul>
+                <div
+                    style={{ display: `${dropdownMenuVisible ? 'flex' : 'none'}` }}
+                    className='dropdown-menu'
+                >
+                    {
+                        links.map(link => <DropdownLink key={uuidv4()} link={link} />)
+                    }
+                    <div className='arrow'></div>
+                    <ul>
 
-                </ul>
+                    </ul>
 
+                </div>
             </div>
         </div>
     )

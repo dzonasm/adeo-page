@@ -1,38 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import DropDownMenu from '../dropdownMenu/dropdown-menu.component'
-import { toggleHamburgerMenu } from '../../redux/burger-reducer/burger-actions'
 import NavigationLink from './navigation-link.component'
 import { v4 as uuidv4 } from 'uuid'
 
 
 import './navigation.styles.scss'
 
-const Navigation = ({ isHeaderNav, isFooterNav }) => {
+const Navigation = ({ isFooterNav }) => {
 
     const selectBurgerState = state => state.hamburgerMenu.showHamburgerMenu
     const isBurgerVisible = useSelector(selectBurgerState)
-    const dispatch = useDispatch()
-
-
-    const handleLinkClick = () => {
-        if (isBurgerVisible) {
-            dispatch(toggleHamburgerMenu)
-        } else return
-    }
-
 
 
     const navStyle = isBurgerVisible ? { transform: 'translateX(0%)' } : null
     const pages = ['home', 'service', 'works', 'about me', 'contact']
 
     return (
-        <ul className='nav-items' style={navStyle}>
+        <ul className={`${isFooterNav ? 'isFooterNav' : null} nav-items`} style={navStyle}>
             {
                 pages.map(page => <NavigationLink key={uuidv4()} page={page} />)
             }
-            <DropDownMenu />
+            {
+                isFooterNav ? null : <DropDownMenu />
+            }
+
         </ul>
     )
 }

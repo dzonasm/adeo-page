@@ -1,7 +1,7 @@
 import React from 'react'
 import Navigation from '../../components/navigation/navigation.component'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { toggleHamburgerMenu } from '../../redux/burger-reducer/burger-actions'
 
 import "./header.styles.scss"
@@ -10,17 +10,9 @@ import Burger from '../burger/burger.component'
 const Header = () => {
 
     const dispatch = useDispatch()
-    const selectHamburgerState = state => state.hamburgerMenu.showHamburgerMenu
-    const showHamburgerMenu = useSelector(selectHamburgerState)
 
     const handleNav = () => {
         dispatch(toggleHamburgerMenu)
-    }
-
-    const handleLinkClick = () => {
-        if (showHamburgerMenu) {
-            dispatch(toggleHamburgerMenu)
-        } else return
     }
 
     return (
@@ -28,7 +20,7 @@ const Header = () => {
             <div className='header-content-container'>
                 <div className='header-left-side'>
                     <div className='header-menu-text-items'>
-                        <Link onClick={handleLinkClick} className='header-item' to='/page/menu'>
+                        <Link className='header-item' to='/page/menu'>
                             <div >MENU</div>
                         </Link>
                         <Link className='header-item' to='/page/some text'>
