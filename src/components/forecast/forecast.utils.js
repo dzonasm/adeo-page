@@ -20,9 +20,9 @@ export const imageLogic = (forecast) => {
     if (forecast === "clear" || "isolated-clouds" || "scattered-clouds" || "na") {
         return 'sunglasses'
     }
-    if (forecast === 'sleet' || 'light-snow' || 'moderate-snow' || 'heavy-snow') {
+    else if (forecast === 'sleet' || 'light-snow' || 'moderate-snow' || 'heavy-snow') {
         return 'snow'
-    } if (forecast === 'overcast' || 'light-rain' || 'moderate-rain' || 'heavy-rain' || 'fog') {
+    } else if (forecast === 'overcast' || 'light-rain' || 'moderate-rain' || 'heavy-rain' || 'fog') {
         return 'umbrella'
     }
     else {

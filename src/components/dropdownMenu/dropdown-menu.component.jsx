@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom'
 
 import './dropdown-menu.styles.scss'
 
-const DropDownMenu = ({ }) => {
+const DropDownMenu = () => {
     const selectDropdownMenuState = state => state.dropdownMenu.showDropdownMenu
     const dropdownMenuVisible = useSelector(selectDropdownMenuState)
     console.log(dropdownMenuVisible)

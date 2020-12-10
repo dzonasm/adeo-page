@@ -1,6 +1,8 @@
 import { put, all, takeEvery, call } from 'redux-saga/effects'
 import axios from 'axios'
 
+import { fetchForecastFailure, fetchForecastSuccess } from './forecast-actions'
+
 import forecastActionTypes from './forecast-action-types'
 
 export function* fetchForecastAsync() {
@@ -11,15 +13,9 @@ export function* fetchForecastAsync() {
         const timestampData = yield response.data.forecastTimestamps
         const latestForecast = yield timestampData[0].conditionCode
 
-
-        yield put({
-            type: forecastActionTypes.FORECAST_FETCH_SUCCESS, payload: latestForecast
-        })
-
+        yield put(fetchForecastSuccess(latestForecast))
     } catch (error) {
-        yield put({
-            type: forecastActionTypes.FORECAST_FETCH_FAILURE, payload: error.message
-        })
+        yield put(fetchForecastFailure(error.message))
     }
 }
 
